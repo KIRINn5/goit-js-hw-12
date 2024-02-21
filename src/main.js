@@ -3,6 +3,7 @@ import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import axios from 'axios';
+import "./styles.css";
 
 const apiKey = "41734083-bc7e7acddd543bb8e35e20b9d";
 const searchForm = document.getElementById("search-form");
@@ -230,4 +231,16 @@ function createGalleryCard(image) {
 
   card.appendChild(img);
   return card;
+  
+  module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+        },
+      ],
+    },
+  };
+
 }
